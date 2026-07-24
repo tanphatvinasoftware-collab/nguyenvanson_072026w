@@ -42,10 +42,19 @@ $nametype = "slogan";
     // $config['static'][$nametype]['noidung'] = true;
     // $config['static'][$nametype]['noidung_cke'] = true;
 
+/* Slogan đăng ký */
+$nametype = "slogandk";
+$config['static'][$nametype]['title_main'] = "Slogan đăng ký";
+$config['static'][$nametype]['tieude'] = true;
+
 /* Footer */
 $nametype = "footer";
 $config['static'][$nametype]['title_main'] = "Footer";
 $config['static'][$nametype]['tieude'] = true;
+$config['static'][$nametype]['images'] = true;
 $config['static'][$nametype]['noidung'] = true;
 $config['static'][$nametype]['noidung_cke'] = true;
+$config['static'][$nametype]['width'] = $func->ratioSize(353);
+$config['static'][$nametype]['height'] = $func->ratioSize(80);
+$config['static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 ?>

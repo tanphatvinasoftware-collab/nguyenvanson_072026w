@@ -18,12 +18,12 @@ $config['photo']['photo_static'][$nametype]['height'] = 100;
 $config['photo']['photo_static'][$nametype]['thumb'] = '120x100x1';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
-/* Banner */
-$nametype = "banner";
-$config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
+/* Banner quy trình*/
+$nametype = "banner-qt";
+$config['photo']['photo_static'][$nametype]['title_main'] = "Banner quy trình";
 $config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 730;
-$config['photo']['photo_static'][$nametype]['height'] = 120;
+$config['photo']['photo_static'][$nametype]['width'] =   $func->ratioSize(1095);
+$config['photo']['photo_static'][$nametype]['height'] =   $func->ratioSize(850);
 $config['photo']['photo_static'][$nametype]['thumb'] = '730x120x1';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 /* Banner sản phẩm */
@@ -106,8 +106,8 @@ $config['photo']['man_photo'][$nametype]['images_photo'] = true;
 $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
 $config['photo']['man_photo'][$nametype]['link_photo'] = true;
 $config['photo']['man_photo'][$nametype]['tieude_photo'] = true;
-$config['photo']['man_photo'][$nametype]['width_photo'] = 1366;
-$config['photo']['man_photo'][$nametype]['height_photo'] = 600;
+$config['photo']['man_photo'][$nametype]['width_photo'] = 1920;
+$config['photo']['man_photo'][$nametype]['height_photo'] = 843;
 $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
 $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
@@ -123,6 +123,20 @@ $nametype = "slide-product";
     // $config['photo']['man_photo'][$nametype]['height_photo'] = 600;
     // $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
     // $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+
+/* Khách hàng nói gì */
+$nametype = "feedback";
+$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Khách hàng nói gì";
+$config['photo']['man_photo'][$nametype]['number_photo'] = 5;
+$config['photo']['man_photo'][$nametype]['images_photo'] = true;
+$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+$config['photo']['man_photo'][$nametype]['tieude_photo'] = true;
+$config['photo']['man_photo'][$nametype]['mota_photo'] = true;
+$config['photo']['man_photo'][$nametype]['noidung_photo'] = true;
+$config['photo']['man_photo'][$nametype]['width_photo'] =  $func->ratioSize(60);
+$config['photo']['man_photo'][$nametype]['height_photo'] =  $func->ratioSize(60);
+$config['photo']['man_photo'][$nametype]['thumb_photo'] = '30x30x1';
+$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
 /* Mạng xã hội */
 $nametype = "mxh";

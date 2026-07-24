@@ -63,8 +63,8 @@ $type = (isset($_GET["type"])) ? htmlspecialchars($_GET["type"]) : '';
 			<div class="fb-page" 
 			data-href="<?=$optsetting['fanpage']?>" 
 			data-tabs="timeline" 
-			data-width="300" 
-			data-height="170" 
+			data-width="500" 
+			data-height="158" 
 			data-small-header="true" 
 			data-adapt-container-width="true" 
 			data-hide-cover="false" data-show-facepile="true">

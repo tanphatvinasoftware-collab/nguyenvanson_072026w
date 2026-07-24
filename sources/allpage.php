@@ -10,9 +10,10 @@ $banner = $d->rawQueryOne("select photo from #_photo where type = ? and act = ? 
 $slogan = $d->rawQueryOne("select ten$lang as ten from #_static where type = ? limit 0,1",array('slogan'));
 $mxh1 = $d->rawQuery("select ten$lang as ten, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('mxh1'));
 $mxh2 = $d->rawQuery("select ten$lang as ten, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('mxh2'));
+$slogandk = $d->rawQueryOne("select ten$lang as ten from #_static where type = ? limit 0,1",array('slogandk'));
 
 /* Footer */
-$footer = $d->rawQueryOne("select ten$lang as ten, noidung$lang as noidung from #_static where type = ? limit 0,1",array('footer'));
+$footer = $d->rawQueryOne("select ten$lang as ten, noidung$lang as noidung,photo from #_static where type = ? limit 0,1",array('footer'));
 $mxh = $d->rawQuery("select ten$lang as ten, photo, link from #_photo where type = ? and hienthi > 0 order by stt,id desc",array('mxh'));
 $chinhsach = $d->rawQuery("select ten$lang as ten, tenkhongdauvi, tenkhongdauen, mota$lang as mota, ngaytao, id, photo from #_news where type = ? and hienthi > 0 order by stt,id desc",array('chinh-sach'));
 
@@ -27,6 +28,7 @@ $optionsphone = (isset($phone['options']) && $phone['options'] != '') ? json_dec
 /* Menu */
 $splistmenu = $d->rawQuery("select ten$lang as ten, tenkhongdauvi, tenkhongdauen, id from #_product_list where type = ? and hienthi > 0 order by stt,id desc",array('san-pham'));
 $ttlistmenu = $d->rawQuery("select ten$lang as ten, tenkhongdauvi, tenkhongdauen, id from #_news_list where type = ? and hienthi > 0 order by stt,id desc",array('tin-tuc'));
+$dvlistmenu = $d->rawQuery("select ten$lang as ten, tenkhongdauvi, tenkhongdauen, id from #_news where type = ? and hienthi > 0 order by stt,id desc",array('dich-vu'));
 
 /* Get statistic */
     // $tagsSanPham = $d->rawQuery("select ten$lang, tenkhongdauvi, tenkhongdauen, id from #_tags where type = ? and noibat > 0 order by stt,id desc",array('san-pham'));

@@ -20,8 +20,8 @@ $config['news'][$nametype]['mota'] = true;
 $config['news'][$nametype]['noidung'] = true;
 $config['news'][$nametype]['noidung_cke'] = true;
 $config['news'][$nametype]['seo'] = true;
-$config['news'][$nametype]['width'] = $func->ratioSize(480);
-$config['news'][$nametype]['height'] = $func->ratioSize(320);
+$config['news'][$nametype]['width'] = $func->ratioSize(200,2);
+$config['news'][$nametype]['height'] = $func->ratioSize(200,2);
 $config['news'][$nametype]['thumb'] = '100x80x1';
 $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
@@ -53,46 +53,46 @@ if (isset($config['cart']['active']) && $config['cart']['active'] == true ) {
 
 
 /* Dịch vụ */
-// $nametype = "dich-vu";
-// $config['news'][$nametype]['title_main'] = "Dịch vụ";
-// $config['news'][$nametype]['dropdown'] = true;
-// $config['news'][$nametype]['list'] = true;
-// $config['news'][$nametype]['cat'] = true;
-// $config['news'][$nametype]['item'] = true;
-// $config['news'][$nametype]['sub'] = true;
-// $config['news'][$nametype]['tags'] = true;
-// $config['news'][$nametype]['view'] = true;
-// $config['news'][$nametype]['copy'] = true;
-// $config['news'][$nametype]['copy_image'] = true;
-// $config['news'][$nametype]['slug'] = true;
-// $config['news'][$nametype]['check'] = array("noibat" => "Nổi bật");
-// $config['news'][$nametype]['images'] = true;
-// $config['news'][$nametype]['show_images'] = true;
-// $config['news'][$nametype]['gallery'] = array
-// (
-//     $nametype => array
-//     (
-//         "title_main_photo" => "Hình ảnh dịch vụ",
-//         "title_sub_photo" => "Hình ảnh",
-//         "number_photo" => 3,
-//         "images_photo" => true,
-//         "avatar_photo" => true,
-//         "tieude_photo" => true,
-//         "width_photo" => 480,
-//         "height_photo" => 320,
-//         "thumb_photo" => '480x320x1',
-//         "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
-//     ),
-// );
+$nametype = "dich-vu";
+$config['news'][$nametype]['title_main'] = "Dịch vụ";
+$config['news'][$nametype]['dropdown'] = false;
+$config['news'][$nametype]['list'] = false;
+$config['news'][$nametype]['cat'] = false;
+$config['news'][$nametype]['item'] = false;
+$config['news'][$nametype]['sub'] = false;
+$config['news'][$nametype]['tags'] = false;
+$config['news'][$nametype]['view'] = true;
+$config['news'][$nametype]['copy'] = true;
+$config['news'][$nametype]['copy_image'] = true;
+$config['news'][$nametype]['slug'] = true;
+$config['news'][$nametype]['check'] = array("noibat" => "Nổi bật");
+$config['news'][$nametype]['images'] = true;
+$config['news'][$nametype]['show_images'] = true;
+$config['news'][$nametype]['gallery'] = array
+(
+    // $nametype => array
+    // (
+    //     "title_main_photo" => "Hình ảnh dịch vụ",
+    //     "title_sub_photo" => "Hình ảnh",
+    //     "number_photo" => 3,
+    //     "images_photo" => true,
+    //     "avatar_photo" => true,
+    //     "tieude_photo" => true,
+    //     "width_photo" => 480,
+    //     "height_photo" => 320,
+    //     "thumb_photo" => '480x320x1',
+    //     "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
+    // ),
+);
 
-// $config['news'][$nametype]['mota'] = true;
-// $config['news'][$nametype]['noidung'] = true;
-// $config['news'][$nametype]['noidung_cke'] = true;
-// $config['news'][$nametype]['seo'] = true;
-// $config['news'][$nametype]['width'] = $func->ratioSize(480);
-// $config['news'][$nametype]['height'] = $func->ratioSize(320);
-// $config['news'][$nametype]['thumb'] = '100x80x1';
-// $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+$config['news'][$nametype]['mota'] = true;
+$config['news'][$nametype]['noidung'] = true;
+$config['news'][$nametype]['noidung_cke'] = true;
+$config['news'][$nametype]['seo'] = true;
+$config['news'][$nametype]['width'] = $func->ratioSize(416);
+$config['news'][$nametype]['height'] = $func->ratioSize(340);
+$config['news'][$nametype]['thumb'] = '100x80x1';
+$config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
 /* Dịch vụ (List) */
 // $config['news'][$nametype]['title_main_list'] = "Dịch vụ cấp 1";

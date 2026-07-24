@@ -87,7 +87,7 @@ $config = array(
 		'ship' => false,
 	),
 	'contact' => array(
-		'active' => true,
+		'active' => false,
 	),
 	'share_zalo' => false,
 	'oneSignal' => array(

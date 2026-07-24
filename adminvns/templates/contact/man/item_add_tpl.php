@@ -55,6 +55,9 @@ $linkSave = "index.php?com=contact&act=save&p=".$curPage;
                         <label for="dienthoai">Điện thoại:</label>
                         <input type="text" class="form-control" name="data[dienthoai]" id="dienthoai" placeholder="Điện thoại" value="<?=@$item['dienthoai']?>">
                     </div>
+
+                    
+                    <?php /*
                     <div class="form-group col-md-4">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" name="data[email]" id="email" placeholder="Email" value="<?=@$item['email']?>">
@@ -67,6 +70,7 @@ $linkSave = "index.php?com=contact&act=save&p=".$curPage;
                         <label for="tieude">Chủ đề:</label>
                         <input type="text" class="form-control" name="data[tieude]" id="tieude" placeholder="Chủ đề" value="<?=@$item['tieude']?>">
                     </div>
+                    */ ?>
                 </div>
                 <div class="form-group">
                     <label for="noidung">Nội dung:</label>

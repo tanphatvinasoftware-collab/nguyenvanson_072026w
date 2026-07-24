@@ -1,5 +1,5 @@
 
-<?php  if(count($sanphamnb)) { ?>
+<?php  /* if(count($sanphamnb)) { ?>
 		<div id="producthot">
 			<div class="center">
 				<div class="title-main">
@@ -135,3 +135,64 @@
 		</div>
 	<?php } /* */ ?>
 <?php /*  */?>
+
+
+<?php if(!empty($bannerqt) ) { ?>
+<div id="procedure">
+	<div class="center">
+		<img onerror="this.src='<?=$func->addWebpToUrl(THUMBS.'/1095x850x1/assets/images/noimage.png')?>';" src="<?= $func->addWebpToUrl(THUMBS.'/1095x850x2/'.UPLOAD_PHOTO_L.$bannerqt['photo']);?>"/>
+	</div>
+</div>
+<?php } ?>
+<div id="news">
+	<div class="center">
+		<div class="title-main text-start">
+			<h2>Kiến thức về chăm sóc xe</h2>
+		</div>
+		<div class="news-video-container">
+			<div class="news-left">
+				<?php foreach ($tintucnb as $key => $value) { ?>
+					<div class="news-item">
+						<div class="news-image">
+							<a href="<?=$value[$sluglang]?>" class="scale-img">
+								<img onerror="this.src='<?=$func->addWebpToUrl(THUMBS.'/200x200x2/assets/images/noimage.png')?>';" src="<?= $func->addWebpToUrl(THUMBS.'/200x200x1/'.UPLOAD_NEWS_L.$value['photo'],'200x200x1',2);?>" alt="<?=$value['ten']?>" 	loading="lazy">
+							</a>
+						</div>
+						<div class="news-desc">
+							<h3 class="news-name"><a class="text-split text-split-2" href="<?=$value[$sluglang]?>"><?=$value['ten']?></a></h3>
+							<p class="news-info text-split"><?=$value['mota']?></p>
+							<p class="news-date"><?=date('d/m/Y',$value['ngaytao'])?> | Tin tức</p>
+						</div>
+					</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
+<?php	if(count($feedback) > 0) { ?>
+	<div id="feedback">
+		<div class="center">
+			<div class="title-main title-white">
+				<h2>Khách hàng nói gì</h2>
+			</div>
+			<div class="control-relative">
+				<div class="owl-page owl-carousel owl-theme" data-xsm-items="1:10" data-sm-items="1:10" data-md-items="2:10" data-lg-items="3:10" data-xlg-items="3:16" data-rewind="1" data-autoplay="1" data-loop="0" data-lazyload="0" data-mousedrag="0" data-touchdrag="0" data-smartspeed="800" data-autoplayspeed="800" data-autoplaytimeout="5000" data-dots="0" data-animations="" data-nav="1" data-navtext='<i class="fa fa-angle-left"></i>|<i class="fa fa-angle-right"></i>' data-navcontainer=".control-feedback">
+					<?php foreach ($feedback as $v) { ?>
+						<div class="feedback-item" >
+							<p class="feedback-info"><?=$v['noidung']?></p>
+							<div class="feedback-content">
+								<div class="feedback-image"><img onerror="this.src='<?=$func->addWebpToUrl(THUMBS.'/60x60x2/assets/images/noimage.png')?>';" src="<?= $func->addWebpToUrl(THUMBS.'/60x60x1/'.UPLOAD_PHOTO_L.$v['photo'],'60x60x1');?>" alt="<?=$v['ten']?>" 	loading="lazy"></div>
+								<div class="feedback-desc">
+									<p class="feedback-name"><?=$v['ten']?></p>
+									<p class="feedback-work"><?=$v['mota']?></p>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
+				</div>
+				<div class="control-feedback control-style"></div>
+			</div>
+		</div>
+	</div>
+
+<?php } ?>
