@@ -1,0 +1,15 @@
+{
+    "require": {
+        "robmorgan/phinx": "^0.14.0",
+        "monolog/monolog": "^2.11",
+        "filp/whoops": "^2.18"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.12"
+    }
+}

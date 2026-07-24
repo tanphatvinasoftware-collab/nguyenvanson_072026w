@@ -1,0 +1,10 @@
+.vscode/
+.env
+caches/
+logs/
+vendor/
+thumbs/
+.env
+*.log
+libraries/google/vendor/
+libraries/sdk_facebook/vendor/
