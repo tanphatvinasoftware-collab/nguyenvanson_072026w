@@ -82,7 +82,16 @@
 				if(isset($row['id']) && $row['id'] > 0) $func->delete_file(UPLOAD_NEWS.$row['photo']);
 			}
 		}
-
+	if(isset($_FILES['file2']))
+		{
+			$file_name = $func->uploadName($_FILES['file2']["name"]);
+			if($photo = $func->uploadImage("file2", $config['static'][$type]['img_type'],UPLOAD_NEWS,$file_name))
+			{
+				$data['photo2'] = $photo;
+				$row = $d->rawQueryOne("select id, photo2 from #_static where type = ? limit 0,1",array($type));
+				if(isset($row['id']) && $row['id'] > 0) $func->delete_file(UPLOAD_NEWS.$row['photo2']);
+			}
+		}
 		if(isset($_FILES['file-taptin']))
 		{
 			$file_name = $func->uploadName($_FILES['file-taptin']["name"]);

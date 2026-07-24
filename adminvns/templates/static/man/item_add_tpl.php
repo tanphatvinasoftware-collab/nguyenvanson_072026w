@@ -132,6 +132,20 @@ else
                         </div>
                     </div>
                 <?php } ?>
+                <?php if(isset($config['static'][$type]['images2']) && $config['static'][$type]['images2'] == true) { ?>
+                    <div class="card card-vns card-vns-detail card-primary text-sm">
+                        <div class="card-header-vns">
+                            <h3 class="card-title">Hình ảnh <?=$config['static'][$type]['title_main']?></h3>
+                        </div>
+                        <div class="card-body">
+                            <?php
+                            $photoDetail = UPLOAD_NEWS.@$item['photo2'];
+                            $dimension = "Width: ".$config['static'][$type]['width2']." px - Height: ".$config['static'][$type]['height2']." px (".$config['static'][$type]['img_type'].")";
+                            include TEMPLATE.LAYOUT."image2.php";
+                            ?>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <?php if(isset($config['static'][$type]['seo']) && $config['static'][$type]['seo'] == true) { ?>
