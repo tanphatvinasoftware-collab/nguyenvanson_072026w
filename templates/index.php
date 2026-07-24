@@ -8,7 +8,7 @@
 <body <?php if($source=='index'){ echo 'class="index"'; } ?>>
     <?php
     include TEMPLATE.LAYOUT."seo.php";    
-    include TEMPLATE.LAYOUT."banner.php";
+    // include TEMPLATE.LAYOUT."banner.php";
     include TEMPLATE.LAYOUT."menu.php";
     if(!$func->isGoogleSpeed()){
     include TEMPLATE.LAYOUT."mmenu.php";
