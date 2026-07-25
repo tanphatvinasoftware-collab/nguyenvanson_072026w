@@ -1,46 +1,44 @@
 <?php
 /* Config type - Group */
-    // $config['group'] = array(
-    //     "Group Sản Phẩm" => array(
-    //         "product" => array("san-pham"),
-    //         // "tags" => array("san-pham"),
-    //         // "static" => array("gioi-thieu-san-pham"),
-    //         // "photo" => array("slide-product"),
-    //         // "photo_static" => array("watermark"),
-    //         // "newsletter" => array("dangkybaogia")
-    //     ),
-    //     "Group Tin Tức" => array(
-    //         "news" => array("tin-tuc"),
-    //         // "tags" => array("tin-tuc"),
-    //         // "photo_static" => array("watermark-news"),
-    //         // "newsletter" => array("dangkytuyendung")
-    //     )
-    // );
+// $config['group'] = array(
+//     "Group Sản Phẩm" => array(
+//         "product" => array("san-pham"),
+//         // "tags" => array("san-pham"),
+//         // "static" => array("gioi-thieu-san-pham"),
+//         // "photo" => array("slide-product"),
+//         // "photo_static" => array("watermark"),
+//         // "newsletter" => array("dangkybaogia")
+//     ),
+//     "Group Tin Tức" => array(
+//         "news" => array("tin-tuc"),
+//         // "tags" => array("tin-tuc"),
+//         // "photo_static" => array("watermark-news"),
+//         // "newsletter" => array("dangkytuyendung")
+//     )
+// );
 
 /* Config type - Product */
-require_once LIBRARIES.'type/config-type-product.php';
+// require_once LIBRARIES.'type/config-type-product.php';
 
 /* Config type - Tags */
-require_once LIBRARIES.'type/config-type-tags.php';
+// require_once LIBRARIES.'type/config-type-tags.php';
 
 /* Config type - Newsletter */
-require_once LIBRARIES.'type/config-type-newsletter.php';
+require_once LIBRARIES . 'type/config-type-newsletter.php';
 
 /* Config type - News */
-require_once LIBRARIES.'type/config-type-news.php';
+require_once LIBRARIES . 'type/config-type-news.php';
 
 /* Config type - Static */
-require_once LIBRARIES.'type/config-type-static.php';
+require_once LIBRARIES . 'type/config-type-static.php';
 
 /* Config type - Photo */
-require_once LIBRARIES.'type/config-type-photo.php';
+require_once LIBRARIES . 'type/config-type-photo.php';
 
 /* Seo page */
 $config['seopage']['page'] = array(
-    "san-pham" => "Sản phẩm",
-    "tin-tuc" => "Tin tức",
-    "thu-vien-anh" => "Thư viện ảnh",
-    "video" => "Video",
+    "dich-vu" => "Dịch vụ",
+    "kien-thuc" => "Kiến thức",
     "lien-he" => "Liên hệ",
 );
 $config['seopage']['width'] = 300;
@@ -98,15 +96,11 @@ $config['order']['thumb'] = '100x100x1';
 $config['onesignal'] = false;
 
 /* Quản lý mục (Không cấp) */
-if(isset($config['news']))
-{
-    foreach($config['news'] as $key => $value)
-    {
-        if(!isset($value['dropdown']) || (isset($value['dropdown']) && $value['dropdown'] == false))
-        { 
+if (isset($config['news'])) {
+    foreach ($config['news'] as $key => $value) {
+        if (!isset($value['dropdown']) || (isset($value['dropdown']) && $value['dropdown'] == false)) {
             $config['shownews'] = 1;
             break;
         }
     }
 }
-?>

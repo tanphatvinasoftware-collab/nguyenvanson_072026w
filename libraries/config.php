@@ -1,16 +1,16 @@
 <?php
 
-if(!defined('LIBRARIES')) die("Error");
+if (!defined('LIBRARIES')) die("Error");
 /* Root */
 
-define('ROOT',__DIR__);
+define('ROOT', __DIR__);
 define('TEMPLATE_PATH', realpath(__DIR__ . '../../') . '/templates/layout/');
 
 /* Timezone */
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 /* Cấu hình coder */
-define('VNS_MSHD','MSHD');
+define('VNS_MSHD', 'MSHD');
 /* Cấu hình chung */
 $config = array(
 	'author' => array(
@@ -38,9 +38,9 @@ $config = array(
 		'error-reporting' => true,
 		'error-reporting-whoops' => false,
 		'secret' => '$vina@',
-		'salt' => '@#$fd_!34^',
-		'default_pass' => '123qwe',
-		'default_md5' => '3e996cd5598fcdbf639b2f1567d0fb95',
+		'salt' => 'hB3d*^_-WI',
+		'default_pass' => 'f5f18dd0',
+		'default_md5' => 'e0c688622bbf594c5e4f47763b9866ee',
 		'debug-developer' => true,
 		'debug-developer-mailhost' => true,
 		'debug-css' => true,
@@ -51,25 +51,25 @@ $config = array(
 			'max-height' => 1600
 		),
 		'lang' => array(
-			'vi'=>'Tiếng Việt',
+			'vi' => 'Tiếng Việt',
 			//'en'=>'Tiếng Anh'
 		),
 		'lang-doc' => 'vi|en',
 		'slug' => array(
-			'vi'=>'Tiếng Việt',
+			'vi' => 'Tiếng Việt',
 			//'en'=>'Tiếng Anh'
 		),
 		'seo' => array(
-			'vi'=>'Tiếng Việt',
+			'vi' => 'Tiếng Việt',
 			//'en'=>'Tiếng Anh'
 		),
 		'comlang' => array(
-			"gioi-thieu" => array("vi"=>"gioi-thieu"),
-			"san-pham" => array("vi"=>"san-pham"),
-			"tin-tuc" => array("vi"=>"tin-tuc"),
-			"thu-vien-anh" => array("vi"=>"thu-vien-anh"),
-			"video" => array("vi"=>"video"),
-			"lien-he" => array("vi"=>"lien-he")
+			"gioi-thieu" => array("vi" => "gioi-thieu"),
+			"san-pham" => array("vi" => "san-pham"),
+			"tin-tuc" => array("vi" => "tin-tuc"),
+			"thu-vien-anh" => array("vi" => "thu-vien-anh"),
+			"video" => array("vi" => "video"),
+			"lien-he" => array("vi" => "lien-he")
 		)
 	),
 	'googleAPI' => array(
@@ -96,8 +96,8 @@ $config = array(
 		'restId' => 'MWFmZGVhMzYtY2U0Zi00MjA0LTg0ODEtZWFkZTZlNmM1MDg4'
 	),
 	'login' => array(
-		'admin' => 'LoginAdmin'.VNS_MSHD,
-		'member' => 'LoginMember'.VNS_MSHD,
+		'admin' => 'LoginAdmin' . VNS_MSHD,
+		'member' => 'LoginMember' . VNS_MSHD,
 		'attempt' => 5,
 		'delay' => 15
 	),
@@ -117,7 +117,7 @@ error_reporting(($config['website']['error-reporting']) ? E_ALL : 0);
 // 1. Xác định giao thức (http hay https)
 $http = 'http';
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
-    $http .= 's';
+	$http .= 's';
 }
 $http .= '://';
 
@@ -134,10 +134,8 @@ $login_admin = $config['login']['admin'];
 $login_member = $config['login']['member'];
 
 /* Cấu hình upload */
-require_once LIBRARIES."constant.php";
+require_once LIBRARIES . "constant.php";
 
-if($config['website']['error-reporting-whoops'] == true){
-    require_once LIBRARIES."showerror.php";
+if ($config['website']['error-reporting-whoops'] == true) {
+	require_once LIBRARIES . "showerror.php";
 }
-
-?>

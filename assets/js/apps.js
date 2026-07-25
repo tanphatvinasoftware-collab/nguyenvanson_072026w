@@ -1098,3 +1098,32 @@ document.addEventListener("DOMContentLoaded", function () {
     true,
   );
 });
+
+(function () {
+  // 1. Khai báo tất cả các phần tử trước
+  const megaBtn = document.getElementById("megaBtn");
+  const mega = document.getElementById("mega");
+  const closeMega = document.getElementById("closeMega");
+  const s3 = document.getElementById("s3");
+  const sf3 = document.getElementById("sf3");
+  const closeS3 = document.getElementById("closeS3");
+  const moreCta = document.getElementById("moreCta");
+  const ctaMenu = document.getElementById("ctaMenu");
+
+  // 2. Kiểm tra an toàn trước khi gán sự kiện (để tránh lỗi nếu trang này không có nút đó)
+  if (megaBtn && mega) {
+    megaBtn.onclick = () => mega.classList.toggle("open");
+  }
+  if (closeMega && mega) {
+    closeMega.onclick = () => mega.classList.remove("open");
+  }
+  if (s3 && sf3) {
+    s3.onclick = () => sf3.classList.add("open");
+  }
+  if (closeS3 && sf3) {
+    closeS3.onclick = () => sf3.classList.remove("open");
+  }
+  if (moreCta && ctaMenu) {
+    moreCta.onclick = () => ctaMenu.classList.toggle("open");
+  }
+})();

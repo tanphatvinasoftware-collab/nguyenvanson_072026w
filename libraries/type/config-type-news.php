@@ -1,7 +1,7 @@
 <?php
-/* Tin tức */
-$nametype = "tin-tuc";
-$config['news'][$nametype]['title_main'] = "Tin tức";
+/* Kiến thức */
+$nametype = "kien-thuc";
+$config['news'][$nametype]['title_main'] = "Kiến thức";
 $config['news'][$nametype]['dropdown'] = false;
 $config['news'][$nametype]['list'] = false;
 $config['news'][$nametype]['cat'] = false;
@@ -20,8 +20,8 @@ $config['news'][$nametype]['mota'] = true;
 $config['news'][$nametype]['noidung'] = true;
 $config['news'][$nametype]['noidung_cke'] = true;
 $config['news'][$nametype]['seo'] = true;
-$config['news'][$nametype]['width'] = $func->ratioSize(200,2);
-$config['news'][$nametype]['height'] = $func->ratioSize(200,2);
+$config['news'][$nametype]['width'] = $func->ratioSize(416);
+$config['news'][$nametype]['height'] = $func->ratioSize(340);
 $config['news'][$nametype]['thumb'] = '100x80x1';
 $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
@@ -42,8 +42,8 @@ $config['news'][$nametype]['height'] = $func->ratioSize(320);
 $config['news'][$nametype]['thumb'] = '100x80x1';
 $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
-    
-if (isset($config['cart']['active']) && $config['cart']['active'] == true ) {
+
+if (isset($config['cart']['active']) && $config['cart']['active'] == true) {
     /* Hình thức thanh toán */
     $nametype = "hinh-thuc-thanh-toan";
     $config['news']['hinh-thuc-thanh-toan']['title_main'] = "Hình thức thanh toán";
@@ -68,8 +68,7 @@ $config['news'][$nametype]['slug'] = true;
 $config['news'][$nametype]['check'] = array("noibat" => "Nổi bật");
 $config['news'][$nametype]['images'] = true;
 $config['news'][$nametype]['show_images'] = true;
-$config['news'][$nametype]['gallery'] = array
-(
+$config['news'][$nametype]['gallery'] = array(
     // $nametype => array
     // (
     //     "title_main_photo" => "Hình ảnh dịch vụ",
@@ -160,15 +159,11 @@ $config['news'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.J
 // $config['news'][$nametype]['img_type_sub'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
 /* Quản lý mục (Không cấp) */
-if(isset($config['news']))
-{
-    foreach($config['news'] as $key => $value)
-    {
-        if(!isset($value['dropdown']) || (isset($value['dropdown']) && $value['dropdown'] == false))
-        { 
+if (isset($config['news'])) {
+    foreach ($config['news'] as $key => $value) {
+        if (!isset($value['dropdown']) || (isset($value['dropdown']) && $value['dropdown'] == false)) {
             $config['shownews'] = 1;
             break;
         }
     }
 }
-?>
